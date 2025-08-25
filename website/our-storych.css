@@ -1,0 +1,182 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #2c2f92;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-img {
+  height: 70px;
+  margin-right: 0.5em;
+}
+
+.logo-text {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a, .dropbtn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.5em;
+  background-color: #2c3e91;
+  padding: 0.5em 1em;
+  border-radius: 0 0 8px 8px;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 0.4em 0;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header h1 {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #000;
+  font-size: 80px;
+}
+
+.team-section {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.team-card {
+  background: #d8d8d8;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 1px 1px 5px #aaa;
+}
+
+.team-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.team-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  background: #ccc;
+}
+
+.team-info h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.team-info ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+/* TEXT SECTION */
+.story-text-section {
+  background: #ccff99;
+  padding: 40px 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.container {
+  display: flex;
+  gap: 20px;
+}
+.chinese {
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-weight: 400;    
+  background: #ccff99;
+  width: 33%;         /* Box takes up half the page */
+  border-radius: 8px;         /* Rounded corners */
+  padding: 20px;
+  box-sizing: border-box;
+}
+.english {
+  font-weight: 400;    
+  background: #ccff99;
+  width: 33%;         /* Box takes up half the page */
+  border-radius: 8px;         /* Rounded corners */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mission {
+  font-size: 16px;
+}
+
+hr {
+  margin-top: 20px;
+  border: 1px solid #999;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #2c2f92;
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.9em;
+}

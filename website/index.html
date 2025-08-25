@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ETMAC Church</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <img src="images/alliancelogo.png" alt="ETMAC logo" class="logo-img" />
+      <span class="logo-text">ETMAC</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li class="dropdown">
+        <button class="dropbtn">About Us</button>
+        <ul class="dropdown-menu">
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="our-belief.html">Our Belief</a></li>
+          <li><a href="our-team.html">Our Team</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <button class="dropbtn">Ministries</button>
+        <ul class="dropdown-menu">
+          <li><a href="ministry-chinese.html">Chinese</a></li>
+          <li><a href="ministry-english.html">English</a></li>
+          <li><a href="ministry-children.html">Children</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="offering.html">Offer</a></li>
+      <li><a href="indexch.html" id="lang-toggle">中文 / ENG</a></li>
+    </ul>
+  </nav>
+  
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="images/sanctuary1.jpg" alt="Church Sanctuary" />
+    <h1 id="welcome-heading" data-text="WELCOME TO ETMAC">WELCOME TO ETMAC</h1>
+    <p>[some sort of verse that rotates]</p>
+  </header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const el = document.getElementById('welcome-heading');
+    if (!el) return;
+
+    const text = el.dataset.text || el.textContent.trim();
+    el.textContent = '';
+    el.classList.add('typing');
+
+    let i = 0;
+    const speed = 90; // ms per character
+
+    function type() {
+      if (i < text.length) {
+        el.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        el.classList.remove('typing'); // remove cursor when done
+      }
+    }
+
+    type();
+  });
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <!-- Sunday Services -->
+  <section class="services">
+    <!--<p><a href="https://pixabay.com/" target="_blank">https://pixabay.com/</a></p>-->
+    <h2>Sunday Services</h2>
+    <div class="sunday">   
+      <p>3:15 PM – Worship Service</p>4:45 PM - Sunday School</p>
+      <a href="https://www.youtube.com/@ETMAC/live" class="watch-button">Watch Online</a>
+    </div>
+  </section>
+
+  <!-- Calendar -->
+   <div class="container">
+  <section class="calendar">
+    <h2>Upcoming Events</h2>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FToronto&showPrint=0&src=ZXRtYWN3ZWJzaXRlY3JlYXRpb25AZ21haWwuY29t&src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%230b8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  </section>
+
+  <!-- Location -->
+  <section class="location">
+    <h2>Location</h2>
+    <div class="location-content">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d720.4598876344143!2d-79.28958403033336!3d43.75542856687155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d115ca3aa165%3A0x353f832296d365a0!2zRWFzdCBUb3JvbnRvIE1hbmRhcmluIEFsbGlhbmNlIENodXJjaCDln47kuJzlm73or63lrqPpgZPkvJo!5e0!3m2!1sen!2sca!4v1749864225923!5m2!1sen!2sca" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>""
+    </div>
+  </section>
+  </div>
+
+  <div class="end"><p><strong>VISIT US!</strong><br/>1490 Birchmount Rd,<br/> Scarborough, ON M1P 2E3</p></div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Email: <a href="mailto:contact-etmac@ncac.ca">etmac.ca@gmail.com</a></p>
+    <p>East Toronto Mandarin Alliance Church</p>
+    <a class= contact href="contact.html">Contact Us    |</a>
+    <a href="offering.html">     Offering</a>
+  </footer>
+  <script>
+    // Close all dropdowns when clicking outside
+    window.addEventListener('click', function (e) {
+      document.querySelectorAll('.dropdown').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    });
+  
+    // Toggle dropdowns (only one open at a time)
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = this.closest('.dropdown');
+  
+        // Close all other dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.remove('open');
+        });
+  
+        // Toggle current dropdown
+        dropdown.classList.toggle('open');
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>
