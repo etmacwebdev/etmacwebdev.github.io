@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story – ETMAC</title>
+  <link rel="stylesheet" href="our-storych.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <img src="images/alliancelogo.png" alt="ETMAC logo" class="logo-img" />
+      <span class="logo-text">ETMAC</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li class="dropdown">
+        <button class="dropbtn">About Us</button>
+        <ul class="dropdown-menu">
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="our-belief.html">Our Belief</a></li>
+          <li><a href="our-team.html">Our Team</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <button class="dropbtn">Ministries</button>
+        <ul class="dropdown-menu">
+          <li><a href="ministry-chinese.html">Chinese</a></li>
+          <li><a href="ministry-english.html">English</a></li>
+          <li><a href="ministry-children.html">Children</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="offering.html">Offer</a></li>
+      <li><a href="our-story.html" id="lang-toggle">中文 / ENG</a></li>
+    </ul>
+  </nav>
+  
+  <!-- HEADER SECTION -->
+  <section class="header">
+    <div class="title-image-wrapper">
+      <h1>Our story</h1>
+      <img src="images/beach.jpg" alt="Our story image" />
+    </div>
+  </section>
+
+  <!-- STORY TEXT SECTION -->
+  <section class="story-text-section">
+    <div class="container">
+      <p lang="zh-Hans" class = "chinese">
+        城东国语宣道会(East Toronto Mandarin Alliance Church)是加拿大宣道会成员之一，认同并根据其信条、政策、宣言和宪章而运作，成立于2000年11月，位于多伦多世嘉堡，服事周边母语为国语的移民家庭。
+        <br>
+        <br>
+        <strong>本堂简史</strong>
+        <br>
+        <br>
+        2000年8月在加拿大宣道会加东区区监督叶维德牧师(Rev.Doug Wiebe)主持下，差派余东海传道夫妇及基约宣道会对国语福音事工有异象和负担的家庭组成核心成员，拓展在多伦多日趋需要的国语福音事工。
+        <br>
+        <br>
+        ★ 2000年11月12日正式开始第一次崇拜聚会。
+        <br>
+        <br>
+        ★ 2005年陈若薇传道加入英文事工
+        <br>
+        <br>
+        ★ 2008年杨跃敏传道开始服侍
+        <br>
+        <br>
+        ★ 2009年植堂烈治文山国语宣道会
+        <br>
+        <br>
+        ★ 2011年完成组织化，召开第一次会员大会
+        <br>
+        <br>
+        ★ 2025年李景翔传道开始服侍
+        <br>
+        <br>
+      </p>
+      <p class = "english">
+        East Toronto Mandarin Alliance Church, a member of the Alliance Canada, subscribes to and operates according to its Creed, Policies, Declaration and Charter. Founded in November 2000, East Toronto Mandarin Alliance Church is located in Scarborough, Toronto, and ministers to immigrant families whose native language is Mandarin in the surrounding area.
+        <br>
+        <br>
+        <strong>Brief History of the Church</strong>
+        <br>
+        <br>
+        In August 2000, under the leadership of Rev. Doug Wiebe, District Governor of the Canada East District of the Alliance Canada, Rev. Donghai Yu, his wife, and several families of the New Covenant Alliance Church established East Toronto Mandarin Alliance Church with the vision of increasing Mandarin Evangelism.
+        <br>
+        <br>
+        ★ On November 12, 2000, the first worship service started
+        <br>
+        <br>
+        ★ In 2005, Pastor Ivy joined the English ministry
+        <br>
+        <br>
+        ★ In 2008, Pastor Andy began serving
+        <br>
+        <br>
+        ★ 2009 Planted Richmond Hill Mandarin Alliance Church
+        <br>
+        <br>
+        ★ 2011 Completed organizing and held the first membership meeting
+        <br>
+        <br>
+        ★ 2025 Pastor Jeff began serving
+        <br>
+        <br>
+        <div class="mission">Our mission: Sow with weeping, plow with diligence, and reap with joy.</div>
+        <br>
+        <br>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Email: <a href="mailto:info@etmac.org">info@etmac.org</a></p>
+    <p>Address: 231 Milner Ave, Scarborough, ON M1S 5E3</p>
+  </footer>
+
+  <!-- JS for dropdowns -->
+  <script>
+    window.addEventListener('click', function (e) {
+      document.querySelectorAll('.dropdown').forEach(drop => {
+        if (!drop.contains(e.target)) {
+          drop.classList.remove('open');
+        }
+      });
+    });
+
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = this.closest('.dropdown');
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.remove('open');
+        });
+        dropdown.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

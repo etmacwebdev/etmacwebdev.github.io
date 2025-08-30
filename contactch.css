@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+  background: #78d0ff;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 70px; /* Adjust size as needed */
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: white;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Dropdown setup */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropbtn:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.5em;
+  background-color: #60c7ff;
+  padding: 0.5em 1em;
+  border-radius: 0 0 8px 8px;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  margin: 0.4em 0;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+/* Show dropdown when 'open' class is added by JS */
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  text-align: left;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  transform: translateY(-10%);
+}
+
+.hero-text h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hero-text h2 span {
+  font-size: 3.2em;
+  display: block;
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background: #f8fefe;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-section h1 {
+  color: #2c2f92;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+
+/* Load Button */
+.load-button {
+  background-color: #739bbd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.load-button:hover {
+  background-color: #5b7c9c;
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 20px;
+  height: 200px;
+  background: linear-gradient(white, #78d0ff);
+
+}
+footer a {
+  color: rgb(0, 0, 0);
+}
+footer p {
+  font-size: 28px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}

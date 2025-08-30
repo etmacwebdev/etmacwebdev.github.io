@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+  background: #78d0ff;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 70px; /* Adjust size as needed */
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links a,
+.nav-links .dropbtn {
+  font-size: 1.5em;
+  display: flex;              /* forces consistent box model */
+  align-items: center;        /* vertically centers text */
+  padding: 0;                 /* remove button extra padding */
+  line-height: 1;             /* keeps consistent height */
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  display: flex;
+  align-items: center;  /* already there, but keep it */
+  gap: 1.5em;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Dropdown setup */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  /* remove font-size */
+}
+
+
+.dropbtn:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.5em;
+  background-color: #60c7ff;
+  padding: 0.5em 1em;
+  border-radius: 0 0 8px 8px;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  margin: 0.4em 0;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+/* Show dropdown when 'open' class is added by JS */
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+/* ===== HERO SECTION ===== */
+.hero {
+  text-align: center;
+  background: #000;
+  color: white;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+}
+
+/* Heading style + typing cursor */
+#welcome-heading {
+  font-size: 6rem; /* Increased from 2.5rem to 4rem */
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0.25rem 0;
+  font-weight: bold; /* Makes it pop more */
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Apply cursor only while typing */
+#welcome-heading.typing {
+  border-right: 0.12em solid currentColor;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.hero h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 160px;
+  color: white;
+  font-family: 'Gloria Hallelujah', cursive; /* handwriting font */
+}
+
+.hero p {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2em;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+
+.calendar,
+.location {
+  width: 600;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 45px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;  /* center items horizontally */
+  gap: 40px;
+  width: 100%;
+}
+
+.calendar, .location {
+  text-align: center;
+  width: fit-content;
+  /* optional: set fixed widths if you want */
+}
+
+.end {
+  text-align: center;
+  font-size: 28px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.watch-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #78d0ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.watch-button:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Images like calendar and map */
+.calendar img,
+.location img {
+  max-width: 100%;
+  border: 5px solid #2c2f92;
+  border-radius: 10px;
+}
+.calendar img{
+  width: 700px;
+}
+
+/* Location layout */
+.location-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 20px;
+  height: 200px;
+  background: linear-gradient(white, #78d0ff);
+
+}
+footer a {
+  color: rgb(0, 0, 0);
+}
+footer p {
+  font-size: 28px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}

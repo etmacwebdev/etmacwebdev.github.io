@@ -1,0 +1,238 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+  background: #78d0ff;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 70px; /* Adjust size as needed */
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: white;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Dropdown setup */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropbtn:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.5em;
+  background-color: #78d0ff;
+  padding: 0.5em 1em;
+  border-radius: 0 0 8px 8px;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  margin: 0.4em 0;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+/* Show dropdown when 'open' class is added by JS */
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.title-image-wrapper {
+  position: relative;   /* container for absolute positioning */
+  width: 100%;
+  display: block;
+}
+
+.everyone {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ourstory {
+  position: absolute;
+  bottom: 20%;        /* move upward from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 4rem;    /* adjust size */
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+
+.header h1 {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #000;
+  font-size: 80px;
+}
+
+.team-section {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.team-card {
+  background: #d8d8d8;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 1px 1px 5px #aaa;
+}
+
+.team-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.team-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  background: #ccc;
+}
+
+.team-info h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.team-info ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+/* TEXT SECTION */
+.story-text-section {
+  background: white;
+  padding: 40px 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.container {
+  display: flex;
+  gap: 20px;
+}
+.chinese {
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-weight: 400;    
+  background: white;
+  width: 33%;         /* Box takes up half the page */
+  border-radius: 8px;         /* Rounded corners */
+  padding: 20px;
+  box-sizing: border-box;
+}
+.english {
+  font-weight: 400;    
+  background: white;
+  width: 33%;         /* Box takes up half the page */
+  border-radius: 8px;         /* Rounded corners */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mission {
+  font-size: 16px;
+}
+
+hr {
+  margin-top: 20px;
+  border: 1px solid #999;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 20px;
+  height: 200px;
+  background: linear-gradient(white, #78d0ff);
+
+}
+footer a {
+  color: rgb(0, 0, 0);
+}
+footer p {
+  font-size: 28px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}

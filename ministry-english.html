@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>English Ministries – ETMAC</title>
+  <link rel="stylesheet" href="ministry-english.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <img src="images/alliancelogo.png" alt="ETMAC logo" class="logo-img" />
+      <span class="logo-text">ETMAC</span>
+    </a>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <button class="dropbtn">About Us</button>
+        <ul class="dropdown-menu">
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="our-belief.html">Our Belief</a></li>
+          <li><a href="our-team.html">Our Team</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <button class="dropbtn">Ministries</button>
+        <ul class="dropdown-menu">
+          <li><a href="ministry-chinese.html">Chinese</a></li>
+          <li><a href="ministry-english.html">English</a></li>
+          <li><a href="ministry-children.html">Children</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="offering.html">Offer</a></li>
+      <li><a href="ministry-englishch.html">中文 / ENG</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/bridge.png" alt="Bridge background" />
+    <div class="hero-text">
+      <h1>English Ministry</h1>
+      <p>Join us!</p>
+    </div>
+  </section>
+
+  <!-- MINISTRY INFO -->
+  <section class="info">
+    <div class="left">
+      <p>[Insert Photo]</p>
+    </div>
+    <div class="right">
+      <h2>Services:</h2>
+      <p><strong>Sunday:</strong><br>3:15 pm – 4:20 pm</p>
+      <p><strong>Sunday School:</strong><br>4:30 pm – 5:30 pm</p>
+      <h2>Fellowship:</h2>
+      <p><strong>Friday:</strong><br>7:30 pm – 9:00 pm</p>
+      <br>
+      <br>
+      <p><strong>For those entering Gr. 7 and older</strong></p>
+    </div>
+  </section>
+
+  <!-- LINK TO CHINESE -->
+  <!--<div class="other-ministry">
+    <a href="ministry-chinese.html">Chinese Ministries</a>
+  </div>-->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Email: <a href="mailto:info@etmac.org">info@etmac.org</a></p>
+    <p>Address: 231 Milner Ave, Scarborough, ON M1S 5E3</p>
+  </footer>
+
+  <!-- DROPDOWN JS -->
+  <script>
+    window.addEventListener('click', function (e) {
+      document.querySelectorAll('.dropdown').forEach(drop => {
+        if (!drop.contains(e.target)) {
+          drop.classList.remove('open');
+        }
+      });
+    });
+
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = this.closest('.dropdown');
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.remove('open');
+        });
+        dropdown.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

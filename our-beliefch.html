@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Beliefs – ETMAC</title>
+  <link rel="stylesheet" href="our-beliefch.css".css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <img src="images/alliancelogo.png" alt="ETMAC logo" class="logo-img" />
+      <span class="logo-text">ETMAC</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li class="dropdown">
+        <button class="dropbtn">About Us</button>
+        <ul class="dropdown-menu">
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="beliefs.html">Our Belief</a></li>
+          <li><a href="our-team.html">Our Team</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <button class="dropbtn">Ministries</button>
+        <ul class="dropdown-menu">
+          <li><a href="ministry-chinese.html">Chinese</a></li>
+          <li><a href="ministry-english.html">English</a></li>
+          <li><a href="ministry-children.html">Children</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="offering.html">Offer</a></li>
+      <li><a href="our-belief.html" id="lang-toggle">中文 / ENG</a></li>
+    </ul>
+  </nav>
+  
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/sky.jpg" alt="Nature Background" />
+    <h1>OUR BELIEFS</h1>
+  </section>
+
+  <!-- Main Content -->
+  <section class="story-text-section">
+    <div class="container">
+    <p lang="zh-Hans" class = "chinese">
+      <strong>使命、异象和核心价值</strong>
+      <br>
+      <br>
+      1.我们的使命：流泪撒种，辛勤耕耘，欢呼收割
+      <br>
+      <br>
+      2.我们的异象：天国福分耕耘地，天国拓展点将台
+      <br>
+      <br>
+      3.我们的核心价值：看重肢体关系，看重侍奉栽培，看重福音广传
+      <br>
+      <br>
+      Evangelical 广传福音
+      <br>
+      <br>
+      Training 装备信徒
+      <br>
+      <br>
+      Mission 差传宣教
+      <br>
+      <br>
+      Adoration 敬拜赞美
+      <br>
+      <br>
+      Caring 相爱相顾
+      <br>
+      <br>
+    </p>
+    <div class="image">
+      <img src="images/bible.jpg" alt="Bible on table" />
+    </div>
+    <p class = "english">
+      <strong>Mission, Vision and Core Values</strong>
+      <br>
+      <br>
+      2. Our vision: plowing and cultivating for the blessings of the Kingdom of Heaven, and developing disciples to expand the Kingdom of Heaven.
+      <br>
+      <br>
+      3. Our core values: valuing the unity in the body of Christ, valuing discipleship and faithful service , and valuing evangelism
+      <br>
+      <br>
+      E - Evangelism
+      <br>
+      <br>
+      T - Training
+      <br>
+      <br>                                                                          
+      M - Mission
+      <br>
+      <br>
+      A - Adoration
+      <br>
+      <br>
+      C - Caring
+      <br>
+      <br>
+      </p>
+    </div>
+  </section>
+
+ <!-- Footer -->
+  <footer>
+    <p>Email: <a href="mailto:contact-etmac@ncac.ca">etmac@etmacrichmondhill.com</a></p>
+    <p>123 Bible Street, Richmond Hill, ON L4C 0Y2</p>
+  </footer>
+
+  <!-- JS for dropdowns -->
+  <script>
+    window.addEventListener('click', function (e) {
+      document.querySelectorAll('.dropdown').forEach(drop => {
+        if (!drop.contains(e.target)) {
+          drop.classList.remove('open');
+        }
+      });
+    });
+
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = this.closest('.dropdown');
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.remove('open');
+        });
+        dropdown.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

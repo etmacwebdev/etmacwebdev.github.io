@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offer – ETMAC</title>
+  <link rel="stylesheet" href="offeringch.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <img src="images/alliancelogo.png" alt="ETMAC logo" class="logo-img" />
+      <span class="logo-text">ETMAC</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li class="dropdown">
+        <button class="dropbtn">About Us</button>
+        <ul class="dropdown-menu">
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="our-belief.html">Our Belief</a></li>
+          <li><a href="our-team.html">Our Team</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <button class="dropbtn">Ministries</button>
+        <ul class="dropdown-menu">
+          <li><a href="ministry-chinese.html">Chinese</a></li>
+          <li><a href="ministry-english.html">English</a></li>
+          <li><a href="ministry-children.html">Children</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="offering.html">Offer</a></li>
+      <li><a href="offering.html" id="lang-toggle">中文 / ENG</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <img src="images/churchinterior.jpg" alt="Church interior" />
+    <h1><strong>OFFER</strong></h1>
+  </section>
+
+  <!-- Scripture Verse -->
+  <section class="verse">
+    <p>Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.</p>
+    <p><strong>2 Corinthians 9:7</strong></p>
+    <hr>
+  </section>
+
+  <!-- Ways to Give -->
+  <section class="giving">
+    <h2>Ways to Give</h2>
+
+    <h3>Cash in Person</h3>
+
+    <h3>Cheque</h3>
+    <ul>
+      <li>Write payee as East Toronto Mandarin Alliance Church</li>
+    </ul>
+
+    <h3>Banking</h3>
+    <ol>
+      <li>Open banking app or website and log into your account</li>
+      <li>Select e-transfer option</li>
+      <li>Select “add contact” and enter <strong>"2000etmac@gmail.com"</strong> in email address</li>
+      <li>Select contact, select “send,” select desired account, and enter desired amount</li>
+      <li>Press continue</li>
+    </ol>
+  </section>
+
+ <!-- Footer -->
+  <footer>
+    <p>Email: <a href="mailto:contact-etmac@ncac.ca">etmac@etmacrichmondhill.com</a></p>
+    <p>123 Bible Street, Richmond Hill, ON L4C 0Y2</p>
+  </footer>
+
+    <!-- JS for dropdowns -->
+    <script>
+      window.addEventListener('click', function (e) {
+        document.querySelectorAll('.dropdown').forEach(drop => {
+          if (!drop.contains(e.target)) {
+            drop.classList.remove('open');
+          }
+        });
+      });
+  
+      document.querySelectorAll('.dropbtn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const dropdown = this.closest('.dropdown');
+          document.querySelectorAll('.dropdown').forEach(d => {
+            if (d !== dropdown) d.classList.remove('open');
+          });
+          dropdown.classList.toggle('open');
+        });
+      });
+    </script>
+</body>
+</html>
