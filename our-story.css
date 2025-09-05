@@ -120,7 +120,7 @@ body {
 
 .ourstory {
   position: absolute;
-  bottom: 20%;        /* move upward from bottom */
+  bottom: 35%;        /* move upward from bottom */
   left: 50%;
   transform: translateX(-50%);
   color: white;
